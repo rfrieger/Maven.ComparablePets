@@ -1,17 +1,19 @@
 package io.zipcoder;
 
 public class Cat extends Pet {
-    private String name;
+    private String type = "cat";
 
     Cat() {
-        super("Jeff");
-    }
-    Cat(String name) {
-        super(name);
+        super("Jeff", "cat");
     }
 
-    @Override
+    Cat(String name) {
+        super(name, "cat");
+    }
+
     public String speak() {
         return "Meow";
     }
+
+
 }

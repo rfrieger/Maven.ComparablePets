@@ -2,8 +2,7 @@ package io.zipcoder;
 
 import java.lang.reflect.Array;
 import java.security.PrivateKey;
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
 
 public class Application {
@@ -13,9 +12,20 @@ public class Application {
         input.getPetNum();
         input.addPetsArray();
 
+        Collections.sort(input.pets);
+
+
         for (Pet p: input.pets) {
             System.out.println(p.getName());
-            System.out.println(p.speak());
+
         }
+        PetCompare pc = new PetCompare();
+        Collections.sort(input.pets, pc );
+
+        for (Pet p: input.pets) {
+
+            System.out.println(p.getType());
+        }
+
     }
 }

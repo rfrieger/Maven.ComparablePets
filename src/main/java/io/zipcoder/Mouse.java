@@ -2,16 +2,17 @@ package io.zipcoder;
 
 
     public class Mouse extends Pet {
+        private String type = "cat";
 
         Mouse() {
-            super("mousey");
+            super("mousey", "mouse");
         }
 
         Mouse(String name) {
-            super(name);
+            super(name, "mouse");
         }
 
-        @Override
+
         public String speak() {
             return "Mouse sound";
         }

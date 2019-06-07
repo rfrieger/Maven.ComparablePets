@@ -2,16 +2,16 @@ package io.zipcoder;
 
 
     public class Dog extends Pet {
-        private String name;
+        private String type = "dog";
 
         Dog() {
-            super("fido");
+            super("fido", "dog");
         }
         Dog(String name) {
-            super(name);
+            super(name, "dog");
         }
 
-        @Override
+
         public String speak() {
             return "Bark";
         }
